@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{29068F06-CDD0-4317-B4FF-01E46D724C44}</ProjectGuid>
+    <ProjectGuid>{68384EA5-2CAC-452C-884B-90ADB5868850}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConverterWebService</RootNamespace>
-    <AssemblyName>ConverterWebService</AssemblyName>
+    <RootNamespace>ConverterWebApp</RootNamespace>
+    <AssemblyName>ConverterWebApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -67,22 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Length.asmx" />
     <Content Include="Web.config" />
-    <Content Include="Weight.asmx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Length.asmx.cs">
-      <DependentUpon>Length.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Length.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Weight.asmx.cs">
-      <DependentUpon>Weight.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Weight.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -106,9 +94,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>61875</DevelopmentServerPort>
+          <DevelopmentServerPort>54284</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61875/</IISUrl>
+          <IISUrl>http://localhost:54284/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

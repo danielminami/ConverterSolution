@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="calculateWeight">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="value" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="from" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="to" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="calculateWeightResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="calculateWeightResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="calculateWeightSoapIn">
+    <wsdl:part name="parameters" element="tns:calculateWeight" />
+  </wsdl:message>
+  <wsdl:message name="calculateWeightSoapOut">
+    <wsdl:part name="parameters" element="tns:calculateWeightResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Weight1Soap">
+    <wsdl:operation name="calculateWeight">
+      <wsdl:input message="tns:calculateWeightSoapIn" />
+      <wsdl:output message="tns:calculateWeightSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Weight1Soap" type="tns:Weight1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="calculateWeight">
+      <soap:operation soapAction="http://tempuri.org/calculateWeight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Weight1Soap12" type="tns:Weight1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="calculateWeight">
+      <soap12:operation soapAction="http://tempuri.org/calculateWeight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Weight1">
+    <wsdl:port name="Weight1Soap" binding="tns:Weight1Soap">
+      <soap:address location="http://localhost:61875/Weight.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Weight1Soap12" binding="tns:Weight1Soap12">
+      <soap12:address location="http://localhost:61875/Weight.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

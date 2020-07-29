@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{29068F06-CDD0-4317-B4FF-01E46D724C44}</ProjectGuid>
+    <ProjectGuid>{413E1468-AED4-4823-B899-629546220AF0}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConverterWebService</RootNamespace>
-    <AssemblyName>ConverterWebService</AssemblyName>
+    <RootNamespace>UnitesWebConverterGroup_P14_1205_11181_2</RootNamespace>
+    <AssemblyName>UnitesWebConverterGroup-P14_1205_11181_2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -44,6 +44,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,24 +69,66 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Length.asmx" />
+    <Content Include="Weight.aspx" />
+    <None Include="Connected Services\ServiceReferenceLength\Length.wsdl" />
+    <Content Include="Connected Services\ServiceReferenceLength\UnitesWebConverterGroup_P14_1205_11181_2.ServiceReferenceLength.calculateLengthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceReferenceWeight\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReferenceWeight\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReferenceWeight\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServiceReferenceLength\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReferenceLength\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReferenceLength\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="HomePage.aspx" />
+    <Content Include="Length.aspx" />
     <Content Include="Web.config" />
-    <Content Include="Weight.asmx" />
+    <Content Include="Connected Services\ServiceReferenceWeight\UnitesWebConverterGroup_P14_1205_11181_2.ServiceReferenceWeight.calculateWeightResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Length.asmx.cs">
-      <DependentUpon>Length.asmx</DependentUpon>
-      <SubType>Component</SubType>
+    <Compile Include="Connected Services\ServiceReferenceLength\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Length.cs" />
+    <Compile Include="Connected Services\ServiceReferenceWeight\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Length.aspx.cs">
+      <DependentUpon>Length.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Length.aspx.designer.cs">
+      <DependentUpon>Length.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Weight.asmx.cs">
-      <DependentUpon>Weight.asmx</DependentUpon>
-      <SubType>Component</SubType>
+    <Compile Include="Weight.aspx.cs">
+      <DependentUpon>Weight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Weight.cs" />
+    <Compile Include="Weight.aspx.designer.cs">
+      <DependentUpon>Weight.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ServiceReferenceWeight\Weight.wsdl" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -92,6 +136,13 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReferenceLength\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReferenceWeight\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -106,9 +157,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>61875</DevelopmentServerPort>
+          <DevelopmentServerPort>55051</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61875/</IISUrl>
+          <IISUrl>http://localhost:55051/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

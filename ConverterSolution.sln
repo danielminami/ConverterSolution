@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.28307.1145
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConverterWebService", "ConverterWebService\ConverterWebService.csproj", "{29068F06-CDD0-4317-B4FF-01E46D724C44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitesWebConverterGroup-P14_1205_11181_2", "UnitesWebConverterGroup-P14_1205_11181_2\UnitesWebConverterGroup-P14_1205_11181_2.csproj", "{413E1468-AED4-4823-B899-629546220AF0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{29068F06-CDD0-4317-B4FF-01E46D724C44} = {29068F06-CDD0-4317-B4FF-01E46D724C44}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{29068F06-CDD0-4317-B4FF-01E46D724C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29068F06-CDD0-4317-B4FF-01E46D724C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29068F06-CDD0-4317-B4FF-01E46D724C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{413E1468-AED4-4823-B899-629546220AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{413E1468-AED4-4823-B899-629546220AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{413E1468-AED4-4823-B899-629546220AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{413E1468-AED4-4823-B899-629546220AF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
